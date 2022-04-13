@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<c3p0-config>
+    <!--默认配置 如果没有指定配置的话 ，则使用默认配置-->
+    <default-config>
+
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/hospital</property>
+
+        <property name="user">root</property>
+
+        <property name="password">root</property>
+
+        <property name="initialPoolSize">5</property>
+
+        <property name="maxPoolSize">10</property>
+
+        <property name="minPoolSize">5</property>
+
+        <property name="acquireIncrement">5</property>
+
+        <property name="checkoutTimeout">5</property>
+
+        <property name="checkoutTimeout">3000</property>
+
+        <user-overrides user="test-user">
+            <property name="maxPoolSize">10</property>
+            <property name="minPoolSize">1</property>
+            <property name="maxStatements">0</property>
+        </user-overrides>
+
+    </default-config>
+
+    <!-- 指定的配置方式 -->
+    <named-config name="stu05">
+        <property name = "driverClass">com.mysql.jdbc.Driver</property>
+        <property name = "jdbcUrl">jdbc:mysql://localhost:3306/hospital</property>
+        <property name = "user">root</property>
+        <property name = "password">root</property>
+
+        <property name="initialPoolSize">5</property>
+        <property name="maxPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxStatements">0</property>
+        <property name="acquireIncrement">5</property>
+        <property name="checkoutTimeout">3000</property>
+
+        <user-overrides user="test-user">
+            <property name="maxPoolSize">10</property>
+            <property name="minPoolSize">1</property>
+            <property name="maxStatements">0</property>
+        </user-overrides>
+    </named-config>
+
+</c3p0-config>
